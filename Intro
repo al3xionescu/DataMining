@@ -1,0 +1,18 @@
+Data mining is the process of extracting insights from large datasets using statistical and computational techniques. It can involve structured, semi-structured or unstructured data 
+stored in databases, data warehouses or data lakes. The goal is to uncover hidden patterns and relationships to support informed decision-making and predictions using methods like 
+clustering, classification, regression and anomaly detection. Data mining is widely used in industries such as marketing, finance, healthcare and telecommunications. For example, it 
+helps identify customer segments in marketing or detect disease risk factors in healthcare. However, it also raises ethical concerns particularly regarding privacy and the misuse of 
+personal data, requiring careful safeguards. 
+
+Data mining techniques:
+1. Regression - used to model the relationship between a dependent variable and one or more independent variables
+2. Classification - assigns data items to predefined categories or classes based on their attributes
+                  - evaluates how well the model fits the training data and performs on unseen data
+                  - models are assessed using metrics like accuracy, precision, recall and F1-score
+3. Clustering - groups data into clusters based on similarity/ proximity
+              - measures similarity using distance metrics such as Euclidean or cosine distance
+              - useful for market segmentation, social network analysis, image grouping
+4. Associationg rule mining - identifies relationships or correlations between variables or items in datasets
+                            - evaluates rules using support, confidence and lift metrics
+5. Dimensionality Reduction - reduces the number of features or variables in the data while preserving structure
+                            - answers questions like "What are the most important features?" and "How to simplify the data without losing meaning?"
