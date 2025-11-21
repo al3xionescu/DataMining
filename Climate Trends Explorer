@@ -1,0 +1,32 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Load data
+df = pd.read_csv("temperature_data.csv", parse_dates=["date"])
+
+# Clean / preprocess
+df = df.dropna(subset=["temp"])          # remove missing temps
+df["year"] = df["date"].dt.year          # extract year
+
+# Compute annual averages
+annual = df.groupby("year")["temp"].mean().reset_index()
+
+# Plot long-term trend
+plt.figure(figsize=(10,5))
+plt.plot(annual["year"], annual["temp"])
+plt.title("Global Average Temperature Over Time")
+plt.xlabel("Year")
+plt.ylabel("Temperature Anomaly (°C)")
+plt.grid(True)
+plt.show()
+
+# Optional: rolling average
+annual["rolling_10yr"] = annual["temp"].rolling(10).mean()
+
+plt.figure(figsize=(10,5))
+plt.plot(annual["year"], annual["rolling_10yr"])
+plt.title("10-Year Rolling Average Temperature Anomaly")
+plt.xlabel("Year")
+plt.ylabel("Temperature Anomaly (°C)")
+plt.grid(True)
+plt.show()
